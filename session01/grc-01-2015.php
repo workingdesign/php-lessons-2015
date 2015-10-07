@@ -31,7 +31,7 @@ $roundLink = "<a href='http://php.net/manual/en/function.round.php' target='_bla
 	<header>
 		<h2>First PHP lesson 2015</h2>
 
-<pre><code class="language-php">
+<pre><code class="language-php line-numbers">
 	// we declare in order all the constants and all the variable first
 
 	const STYLESHEET_PATH = "./css/";
@@ -46,7 +46,9 @@ $roundLink = "<a href='http://php.net/manual/en/function.round.php' target='_bla
 	$myJsHighlighter = "prism.js";
 	$myName = "Giorgio";
 	$myHeightCm = 182;
-	$roundLink = "<a href='http://php.net/manual/en/function.round.php' target='_blank'>php.net/manual/en/function.round.php</a>";
+	$roundLink = "&lt;a href='http://php.net/manual/en/function.round.php' target='_blank'>http://php.net/manual/en/function.round.php&lt;/a>";
+
+	// pre-existing HTML is stripped off in prism.js
 </code></pre>		
 	
 	</header>
@@ -65,16 +67,18 @@ $roundLink = "<a href='http://php.net/manual/en/function.round.php' target='_bla
 
 ?>
 
-<pre><code class="language-php">
-	echo '<p>' . 'My PHP name is' . ' ' . $myName . '</p>';
+<pre><code class="language-php line-numbers">
+	echo '&lt;p>' . 'My PHP name is' . ' ' . $myName . '&lt;/p>';
 
-	echo '<p>and my height [' . $myHeightCm . 'cm] in feet is:</p>';
+	echo '&lt;p>and my height [' . $myHeightCm . 'cm] in feet is:&lt;/p>';
 
-	echo $myHeightCm / 30.48 . '\'' . '<br>';
+	echo $myHeightCm / 30.48 . '\'' . '&lt;br>';
 
-	echo '<pre><code>{FT = CM/30.48 <---> CM = 30.48*FT}</code></pre>';
+	echo '&lt;pre>&lt;code>{FT = CM/30.48 <---> CM = 30.48*FT}&lt;/code>&lt;/pre>';
 
-	echo '<p>or using "<em>round</em>" [' . $roundLink . '] is: <br><br> '	. round ( $myHeightCm / 30.48 ) . '\'</p>';
+	echo '&lt;p>or using "&lt;em>round&lt;/em>" [' . $roundLink . '] is: &lt;br>&lt;br> '	. round ( $myHeightCm / 30.48 ) . '\'&lt;/p>';
+
+	// pre-existing HTML is stripped off in prism.js
 </code></pre>
 
 		</div>
@@ -90,7 +94,7 @@ $daughterName = 'Ellen';
 //echo "my daughter name is " . $daughterName;
 
 function print_names($daughterName) {
-	echo "Hello " . $daughterName . " !"; // without invoking the function name or return or print this echo here won't work
+	echo "Hello <strong>" . $daughterName . " !</strong>"; // without invoking the function name or return or print this echo here won't work
 }
 
 print_names($daughterName); 	//this prints all the output
@@ -99,18 +103,20 @@ print_names($daughterName); 	//this prints all the output
 ?>
 			</p>
 
-<pre><code class="language-php">
+<pre><code class="language-php line-numbers">
 	# comment that I never use
 
 	$daughterName = 'Ellen';
 	//echo "my daughter name is " . $daughterName;
 
 	function print_names($daughterName) {
-		echo "Hello " . $daughterName . " !"; // without invoking the function name or return or print this echo here won't work
+		echo "Hello &lt;strong>" . $daughterName . " !&lt;/strong>"; // without invoking the function name or return or print this echo here won't work
 	}
 
 	print_names($daughterName); 	//this prints all the output
 	//print $daughterName; 			//this print only the name
+
+	// pre-existing HTML is stripped off in prism.js
 </code></pre>
 
 		</div>
