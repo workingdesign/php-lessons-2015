@@ -93,12 +93,13 @@ $roundLink = "<a href='http://php.net/manual/en/function.round.php' target='_bla
 $daughterName = 'Ellen';
 //echo "my daughter name is " . $daughterName;
 
-function print_names($daughterName) {
+function display_names( $daughterName ) {
 	echo "Hello <strong>" . $daughterName . " !</strong>"; // without invoking the function name or return or print this echo here won't work
 }
 
-print_names($daughterName); 	//this prints all the output
+display_names( $daughterName ); 	//this prints all the output
 //print $daughterName; 			//this print only the name
+//echo $daughterName;			//this echo only the name
 
 ?>
 			</p>
@@ -109,12 +110,41 @@ print_names($daughterName); 	//this prints all the output
 	$daughterName = 'Ellen';
 	//echo "my daughter name is " . $daughterName;
 
-	function print_names($daughterName) {
+	function display_names( $daughterName ) {
 		echo "Hello &lt;strong>" . $daughterName . " !&lt;/strong>"; // without invoking the function name or return or print this echo here won't work
 	}
 
-	print_names($daughterName); 	//this prints all the output
+	display_names($daughterName); 	//this prints all the output
 	//print $daughterName; 			//this print only the name
+	//echo $daughterName;			//this echo only the name
+
+	// pre-existing HTML is stripped off in prism.js
+</code></pre>
+
+<?php
+
+function addition( $a, $b ) {
+	$addition = $a + $b;
+
+	//return $addition;
+}
+
+$addition = addition( 5, 8 );
+
+echo '<br>Addition of $a + $b = ' . $addition;
+
+?>
+
+<pre><code class="language-php line-numbers">
+	function addition( $a, $b ) {
+		$addition = $a + $b;
+
+		return $addition;
+	}
+
+	$addition = addition( 5, 8 );
+
+	echo '&lt;br>Addition of $a + $b = ' . $addition;
 
 	// pre-existing HTML is stripped off in prism.js
 </code></pre>
