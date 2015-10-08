@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: #e6e6e6;
+}
+
+p {
+	/*background-color: grey;*/
+}
+
+#wrapper,
+.wrapper {
+	color:#000000;
+	font-family:tahoma;
+	font-size:14px;
+	margin: 60px 0 0 50px;
+	width:800px;
+}
+
+#wrapper a,
+.wrapper a {
+	cursor:pointer;
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+.box {
+    background-color: #ffffff;
+    color: #888888;
+    height: auto;
+    left: 100%;
+    padding: 20px;
+    position: absolute;
+    right: 30%;
+    top: 15%;
+    width: 555px;
+    z-index: 101;
+	border:5px solid #888888;
+	border-radius:10px;
+	-moz-border-radius:10px;
+}
+
+.overlay {
+    background: #000000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+	opacity:0.5;
+}
+
+a.boxclose {
+    background: url("file:///C|/Users/Giorgio/AppData/Local/Temp/images/cancel.png") repeat scroll left top transparent;
+    cursor: pointer;
+    float: right;
+    height: 26px;
+    left: 32px;
+    position: relative;
+    top: -33px;
+    width: 26px;
+}
+
+#boxpopup a.top {
+    cursor: pointer;
+    position: relative;
+	background-color: orange;
+	font-size: 1.1rem;
+	font-weight: bold;
+	border-radius: 10px;
+	text-decoration: none;
+	padding: 5px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+}
+
+.demo {
+	position:fixed; 
+	right:0; 
+	bottom:0; 
+	background-image: -moz-linear-gradient(center top , #333333, #222222); 
+	background-color: #2C2C2C; 
+	border-radius: 5px 0 0 0;
+	color: #FFFFFF;
+	padding: 10px;
+	font-size: 13px;
+	line-height: 18px;
+	\box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+	
+	background-image: -webkit-linear-gradient(top,#333,#222);
+	background-image: -moz-linear-gradient(top,#333,#222);
+	background-image: -ms-linear-gradient(top,#333,#222);
+	
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#333333',endColorstr='#222222',GradientType=0);
+	font-family:Arial;
+}
+
+main {
+	display: block;
+}
