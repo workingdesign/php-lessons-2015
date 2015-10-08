@@ -11,15 +11,17 @@ const SCRIPTS_PATH = "./js/";
 
 $lessonNumber = 2;
 $myCss = "style.css";
-$myCssHighlighter = "prism.css";
-$myJsHighlighter = "prism.js";
+// $myCssHighlighter = "prism.css";
+// $myJsHighlighter = "prism.js";
 
 ?>
 
 	<title>PHP lesson <?php echo $lessonNumber; ?></title>
 
 	<link rel="stylesheet" href="<?php echo STYLESHEET_PATH . $myCss; ?>" type="text/css">
-	<link rel="stylesheet" href="<?php echo STYLESHEET_PATH . $myCssHighlighter; ?>" type="text/css">
+	<link rel="stylesheet" href="<?php //echo STYLESHEET_PATH . $myCssHighlighter; ?>" type="text/css">
+	<!-- https://highlightjs.org -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
 </head>
 <body>
 	<header>
@@ -41,11 +43,30 @@ $myJsHighlighter = "prism.js";
 
 	<footer>
 		<h4>
-			<!-- Exercise completed. -->
+			TESTING HIGHLIGHT.JS
 		</h4>
 	</footer>
 
-<script src="<?php echo SCRIPTS_PATH . $myJsHighlighter; ?>"></script>
+<pre><code class="php">
+	the outcome is pretty much the same as PRISM.JS
+
+	// pre-existing HTML is stripped off in highlight.js as well
+
+	echo '&lt;p>' . 'My PHP name is' . ' ' . $myName . '&lt;/p>';
+
+	echo '&lt;p>and my height [' . $myHeightCm . 'cm] in feet is:&lt;/p>';
+
+	echo $myHeightCm / 30.48 . '\'' . '&lt;br>';
+
+	echo '&lt;pre>&lt;code>{FT = CM/30.48 <---> CM = 30.48*FT}&lt;/code>&lt;/pre>';
+
+	echo '&lt;p>or using "&lt;em>round&lt;/em>" [' . $roundLink . '] is: &lt;br>&lt;br> '	. round ( $myHeightCm / 30.48 ) . '\'&lt;/p>';
+</code></pre>
+
+<script src="<?php //echo SCRIPTS_PATH . $myJsHighlighter; ?>"></script>
+<!-- https://highlightjs.org -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
 </body>
 </html>
